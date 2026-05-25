@@ -26,13 +26,15 @@ body{font-family:var(--f-serif);color:var(--paper);-webkit-font-smoothing:antial
 
 body::before{
   content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:url('https://raw.githubusercontent.com/anthropics/lecture-html-assets/main/bg-stage.jpg'),
-                   radial-gradient(ellipse 80% 60% at 50% 40%, rgba(40,30,20,0.4), transparent 70%);
+  background-image:url('images/bg-stage.jpg');
   background-size:cover;background-position:center;background-repeat:no-repeat;
   background-color:#020208;
 }
 @media (max-aspect-ratio:1/1){
-  body::before{background-size:cover;background-repeat:no-repeat}
+  body::before{
+    background-image:url('images/bg-tile.jpg');
+    background-size:min(50vh,90vw) auto;background-repeat:repeat;
+  }
 }
 body::after{
   content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
@@ -110,7 +112,7 @@ h2.subtitle{
 .progress-bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:101;background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-3));transition:width 0.5s ease}
 
 .brand-fix{position:fixed;bottom:5.5vh;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:clamp(0.9rem,1.5vw,1.5rem);pointer-events:none;z-index:50}
-.brand-fix .brand-dot{width:clamp(8px,0.8vw,12px);height:clamp(8px,0.8vw,12px);border-radius:50%;background:var(--gold);box-shadow:0 0 18px rgba(200,163,92,0.6)}
+.brand-fix img{width:clamp(40px,4vw,60px);height:auto;opacity:0.85;filter:drop-shadow(0 0 18px rgba(200,163,92,0.18))}
 .brand-fix .brand-text{font-family:var(--f-serif);font-size:clamp(0.95rem,1.3vw,1.2rem);color:var(--gold-l);letter-spacing:0.25em;padding-left:0.25em;white-space:nowrap;font-weight:500}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
@@ -123,6 +125,7 @@ h2.subtitle{
 
 @media (max-aspect-ratio:1/1){
   .three-col{grid-template-columns:1fr;gap:1.5rem}
+  .brand-fix img{width:clamp(32px,8vw,46px)}
   .brand-fix .brand-text{font-size:clamp(0.85rem,2.6vw,1rem);letter-spacing:0.15em}
 }
 </style>
@@ -258,7 +261,7 @@ h2.subtitle{
 </div>
 
 <div class="brand-fix">
-  <span class="brand-dot"></span>
+  <img src="images/logo.png" alt="logo">
   <span class="brand-text">企业 AI 智能体改造实战课 · 聪哥出品</span>
 </div>
 
