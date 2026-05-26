@@ -3,32 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>企业 AI 智能体改造实战课 · 开课导言</title>
+<title>0.0 企业 AI 智能体改造先导课 · 我是谁 · 市场机会 · 两条路 | 聪哥出品</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg-0:#020208;
-  --paper:#ebe5d5; --cream:#d6cdb3;
-  --gold-d:#8a6a32; --gold:#c8a35c; --gold-l:#e8d4a0; --gold-3:#f3d678;
+  --bg-0:#060410;
+  --paper:#ebe5d5;
+  --cream:#d6cdb3;
+  --gold-d:#8a6a32;
+  --gold:#c8a35c;
+  --gold-l:#e8d4a0;
+  --gold-3:#f3d678;
   --red:#d84a3a;
+  --red-d:#a8302c;
+  --green:#4caf50;
   --muted:#8a8070;
   --line:rgba(200,163,92,0.18);
-  --f-serif:"Noto Serif SC","PingFang SC",serif;
-  --f-sans:"Noto Sans SC","PingFang SC",sans-serif;
-  --f-num:"Cinzel",Georgia,serif;
-}
 
+  --f-serif:"Noto Serif SC","Source Han Serif SC","STSong",serif;
+  --f-sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --f-num:"Cinzel","Cormorant Garamond",Georgia,serif;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:100%;height:100%;overflow:hidden;background:var(--bg-0)}
-body{font-family:var(--f-serif);color:var(--paper);-webkit-font-smoothing:antialiased;user-select:none}
+body{
+  font-family:var(--f-serif);
+  color:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  user-select:none;
+  cursor:default;
+}
 
 body::before{
-  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   background-image:url('images/bg-stage.jpg');
   background-size:cover;background-position:center;background-repeat:no-repeat;
-  background-color:#020208;
 }
 @media (max-aspect-ratio:1/1){
   body::before{
@@ -37,7 +48,7 @@ body::before{
   }
 }
 body::after{
-  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   background:radial-gradient(ellipse 75% 65% at center,rgba(0,0,0,0.15) 0%,transparent 80%);
 }
 
@@ -45,88 +56,217 @@ body::after{
 .slide{
   position:absolute;inset:0;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:6vh 8vw;opacity:0;visibility:hidden;transform:translateY(20px);
+  padding:6vh 8vw;
+  opacity:0;visibility:hidden;
   transition:opacity 0.5s ease,transform 0.5s cubic-bezier(.22,.61,.36,1);
+  transform:translateY(20px);
+  overflow-y:auto;
 }
 .slide.active{opacity:1;visibility:visible;transform:translateY(0)}
 
 .eyebrow{
   font-size:clamp(1.1rem,1.6vw,1.5rem);
-  color:var(--gold);letter-spacing:0.4em;text-align:center;
-  margin-bottom:3vh;font-weight:500;
+  color:var(--gold);letter-spacing:0.4em;
+  margin-bottom:3vh;font-weight:500;text-align:center;
+  text-transform:uppercase;
 }
 .eyebrow .num{font-family:var(--f-num);color:var(--gold-3);margin-right:0.6em;font-weight:600}
 
 h1.title{
-  font-size:clamp(2.4rem,5.5vw,5rem);font-weight:700;line-height:1.25;
-  text-align:center;color:var(--paper);margin-bottom:2vh;
+  font-size:clamp(2.6rem,6vw,5.5rem);font-weight:700;
+  text-align:center;line-height:1.2;color:var(--paper);margin-bottom:2vh;
 }
 h2.subtitle{
-  font-size:clamp(1.4rem,2.6vw,2.4rem);text-align:center;color:var(--cream);
-  font-weight:400;line-height:1.5;margin-top:1.5vh;
+  font-size:clamp(1.6rem,3.2vw,3rem);
+  text-align:center;color:var(--cream);font-weight:400;line-height:1.45;margin-top:1.5vh;
 }
 .section-divider{width:60px;height:2px;background:var(--gold);margin:3vh auto}
 
-.caption{font-size:clamp(1rem,1.6vw,1.4rem);color:var(--cream);text-align:center;margin-top:2vh;line-height:1.6}
-.caption-sm{font-size:clamp(0.9rem,1.3vw,1.1rem);color:var(--muted);text-align:center;margin-top:1.5vh;line-height:1.6}
+.label{
+  font-size:clamp(1.1rem,2vw,1.6rem);
+  color:var(--gold-l);text-align:center;letter-spacing:0.15em;margin-bottom:1.5vh;
+}
+.caption{
+  font-size:clamp(1rem,1.6vw,1.4rem);
+  color:var(--cream);text-align:center;margin-top:2vh;line-height:1.6;
+}
+.caption-sm{
+  font-size:clamp(0.9rem,1.3vw,1.1rem);
+  color:var(--muted);text-align:center;margin-top:1.5vh;line-height:1.6;
+}
 
 .bignum{
-  font-family:var(--f-num);font-size:clamp(5rem,16vw,14rem);font-weight:600;
-  line-height:0.95;color:var(--gold);text-shadow:0 0 60px rgba(200,163,92,0.3);
+  font-family:var(--f-num);
+  font-size:clamp(5rem,16vw,14rem);font-weight:600;line-height:0.95;
+  color:var(--gold);text-shadow:0 0 60px rgba(200,163,92,0.3);
   letter-spacing:-0.02em;text-align:center;
 }
-.label{
-  font-size:clamp(1.1rem,2vw,1.6rem);color:var(--gold-l);text-align:center;
-  letter-spacing:0.15em;margin-bottom:1.5vh;
-}
 
-.quote-big{font-size:clamp(2rem,4.2vw,3.8rem);text-align:center;line-height:1.55;font-weight:500;color:var(--paper)}
+.quote-big{
+  font-size:clamp(2.4rem,5.5vw,5.5rem);text-align:center;
+  line-height:1.45;font-weight:500;color:var(--paper);
+}
 .quote-big .em{color:var(--gold-3);font-weight:700}
 .quote-big .red{color:var(--red);font-weight:700}
-.quote-mid{font-size:clamp(1.5rem,2.8vw,2.4rem);text-align:center;line-height:1.6;color:var(--cream)}
+
+.quote-mid{
+  font-size:clamp(1.8rem,3.8vw,3.5rem);text-align:center;line-height:1.55;color:var(--cream);
+}
 .quote-mid .em{color:var(--gold-3)}
 .quote-mid .red{color:var(--red)}
 
-.list-big{text-align:center;font-size:clamp(1.3rem,2.3vw,1.9rem);line-height:2.2;color:var(--cream)}
+.list-big{
+  text-align:center;font-size:clamp(1.5rem,2.8vw,2.4rem);
+  line-height:2;color:var(--cream);
+}
 .list-big li{list-style:none;margin:0.3em 0}
 .list-big .em{color:var(--gold-3);font-weight:700}
 .list-big .num{font-family:var(--f-num);color:var(--gold);font-weight:600;margin-right:0.5em}
 
-.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(2rem,4vw,4rem);max-width:1200px;margin:4vh auto}
-.col-card{text-align:center;padding:clamp(1.5rem,2.5vw,2.5rem);border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,0.02)}
-.col-card.primary{border:2px solid var(--gold);background:rgba(200,163,92,0.08)}
-.col-medal{font-size:clamp(2.5rem,5vw,4.5rem);margin-bottom:1vh;font-family:var(--f-num);color:var(--gold)}
-.col-title{font-size:clamp(1.2rem,2vw,1.7rem);color:var(--paper);font-weight:700;margin-bottom:0.5em}
-.col-desc{font-size:clamp(0.95rem,1.4vw,1.2rem);color:var(--muted);line-height:1.6}
+.spec-card{
+  max-width:1040px;width:100%;margin:2.6vh auto;
+  border:2px solid var(--gold);border-radius:16px;
+  padding:clamp(1.5rem,2.6vw,2.4rem) clamp(1.7rem,2.8vw,2.8rem);
+  background:rgba(200,163,92,0.07);
+  display:flex;flex-direction:column;gap:1.5vh;
+}
+.spec-card .spec-row{
+  display:flex;align-items:flex-start;
+  gap:clamp(0.9rem,1.8vw,1.6rem);
+  padding-bottom:1.5vh;border-bottom:1px dashed var(--line);
+}
+.spec-card .spec-row:last-child{border-bottom:none;padding-bottom:0}
+.spec-card .spec-key{
+  font-family:var(--f-sans);font-size:clamp(0.85rem,1.2vw,1rem);
+  color:var(--gold-3);letter-spacing:0.14em;font-weight:700;
+  white-space:nowrap;min-width:5.6em;padding-top:0.3em;
+}
+.spec-card .spec-val{
+  font-size:clamp(1.05rem,1.65vw,1.42rem);
+  color:var(--paper);line-height:1.65;letter-spacing:0.02em;
+}
+.spec-card .spec-val .em{color:var(--gold-3);font-weight:700}
+.spec-card .spec-val .red{color:var(--red);font-weight:700}
+.spec-card .spec-val .muted{color:var(--muted)}
 
-.slide-cover{background:radial-gradient(ellipse at center,rgba(21,16,31,0.25) 0%,rgba(2,2,8,0.5) 80%)}
-.cover-eyebrow{font-family:var(--f-serif);font-size:clamp(0.95rem,1.4vw,1.2rem);color:var(--gold);letter-spacing:0.4em;margin-bottom:3vh;text-align:center}
-.cover-title{font-family:var(--f-serif);font-size:clamp(2.5rem,6vw,5rem);font-weight:700;color:var(--paper);text-align:center;letter-spacing:0.12em;line-height:1.2;margin-bottom:3vh}
+.cmp-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(1.4rem,2.6vw,2.4rem);
+  max-width:1280px;width:100%;margin:3vh auto;
+}
+.cmp-card{
+  padding:clamp(1.4rem,2.2vw,2rem);border-radius:14px;
+  border:1px solid var(--line);background:rgba(255,255,255,0.025);
+}
+.cmp-card.bad{border-color:rgba(216,74,58,0.5);background:rgba(216,74,58,0.06)}
+.cmp-card.good{border-color:rgba(200,163,92,0.5);background:rgba(200,163,92,0.06)}
+.cmp-card .head{
+  font-family:var(--f-num);font-size:clamp(1.5rem,2.6vw,2.8rem);
+  letter-spacing:0.16em;text-align:center;margin-bottom:1.8vh;font-weight:700;
+}
+.cmp-card.bad .head{color:var(--red)}
+.cmp-card.good .head{color:var(--gold-3)}
+.cmp-card .qs{display:flex;flex-direction:column;gap:1.2vh}
+.cmp-card .q{
+  font-size:clamp(1.15rem,1.7vw,2rem);color:var(--cream);line-height:1.65;
+  padding:0.8em 1em;border-radius:8px;background:rgba(255,255,255,0.02);letter-spacing:0.02em;
+}
+.cmp-card.bad .q .em{color:#e8907f;font-weight:700}
+.cmp-card.good .q .em{color:var(--gold-3);font-weight:700}
+
+.fly-row{
+  display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+  gap:clamp(0.7rem,1.4vw,1.4rem);margin:4vh auto;max-width:1240px;
+}
+.fly-row .node{
+  font-family:var(--f-serif);font-size:clamp(1rem,1.7vw,1.45rem);
+  color:var(--cream);padding:0.7em 1.05em;
+  border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,0.025);
+  letter-spacing:0.04em;text-align:center;line-height:1.5;
+}
+.fly-row .node .em{color:var(--gold-3);font-weight:700}
+.fly-row .node .sub{display:block;font-size:0.74em;color:var(--muted);margin-top:0.25em}
+.fly-row .arr{color:var(--gold-d);font-size:clamp(1.4rem,2.4vw,2rem)}
+
+.adv-hero{
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  max-width:920px;margin:0 auto;
+}
+.adv-hero .adv-num{
+  font-family:var(--f-num);font-size:clamp(3rem,7vw,6rem);
+  color:var(--gold-3);line-height:1;text-shadow:0 0 60px rgba(243,214,120,0.35);
+  margin-bottom:1.4vh;font-weight:700;letter-spacing:0.04em;
+}
+.adv-hero .adv-name{font-size:clamp(2rem,4.6vw,3.6rem);color:var(--paper);font-weight:700;letter-spacing:0.06em;margin-bottom:2.4vh}
+.adv-hero .adv-tag{font-size:clamp(1.3rem,2.5vw,2.1rem);color:var(--gold-l);letter-spacing:0.08em;margin-bottom:2vh}
+.adv-hero .adv-tag .gold{color:var(--gold-3);font-weight:700}
+.adv-hero .adv-desc{font-size:clamp(1.1rem,1.8vw,1.5rem);color:var(--cream);line-height:1.7;max-width:800px}
+.adv-hero .adv-desc .em{color:var(--gold-3);font-weight:700}
+.adv-hero .adv-desc .red{color:var(--red);font-weight:700}
+.adv-hero .adv-eg{
+  font-size:clamp(0.95rem,1.4vw,1.2rem);color:var(--muted);
+  margin-top:2vh;letter-spacing:0.04em;
+  border-top:1px dashed var(--line);padding-top:2vh;
+  max-width:700px;line-height:1.6;
+}
+.adv-hero .adv-eg .em{color:var(--gold-l);font-weight:600}
+
+.slide-cover{background:transparent}
+.cover-eyebrow{
+  font-family:var(--f-serif);font-size:clamp(0.95rem,1.4vw,1.2rem);
+  color:var(--gold);letter-spacing:0.5em;margin-bottom:3vh;text-align:center;padding-left:0.5em;
+}
+.cover-title{
+  font-family:var(--f-serif);font-size:clamp(2.4rem,5.6vw,4.8rem);font-weight:700;
+  color:var(--paper);text-align:center;letter-spacing:0.12em;line-height:1.35;margin-bottom:3vh;
+}
 .cover-title .gold{color:var(--gold-3)}
-.cover-motto{font-style:italic;color:var(--cream);text-align:center;font-size:clamp(1.2rem,2.2vw,1.7rem);letter-spacing:0.08em;margin-top:3vh}
-.cover-by{font-family:var(--f-num);color:var(--gold-d);font-size:clamp(0.9rem,1.3vw,1.1rem);margin-top:1.5vh;letter-spacing:0.25em;text-align:center}
+.cover-motto{
+  font-style:italic;color:var(--cream);text-align:center;
+  font-size:clamp(1.2rem,2.2vw,1.7rem);letter-spacing:0.08em;margin-top:3vh;
+}
 
-.controls{position:fixed;bottom:24px;left:0;right:0;display:flex;justify-content:space-between;padding:0 32px;pointer-events:none;z-index:100;font-family:var(--f-sans)}
+.controls{
+  position:fixed;bottom:24px;left:0;right:0;
+  display:flex;justify-content:space-between;padding:0 32px;
+  pointer-events:none;z-index:100;font-family:var(--f-sans);
+}
 .hint{font-size:0.78rem;color:var(--muted);letter-spacing:0.1em}
 .progress{font-family:var(--f-num);font-size:0.95rem;color:var(--gold-d);font-weight:600;letter-spacing:0.15em}
-.progress-bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:101;background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-3));transition:width 0.5s ease}
+.progress-bar{
+  position:fixed;top:0;left:0;height:3px;width:0;z-index:101;
+  background:linear-gradient(90deg,var(--gold-d),var(--gold),var(--gold-3));
+  transition:width 0.5s ease;
+}
 
-.brand-fix{position:fixed;bottom:5.5vh;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:clamp(0.9rem,1.5vw,1.5rem);pointer-events:none;z-index:50}
-.brand-fix img{width:clamp(40px,4vw,60px);height:auto;opacity:0.85;filter:drop-shadow(0 0 18px rgba(200,163,92,0.18))}
-.brand-fix .brand-text{font-family:var(--f-serif);font-size:clamp(0.95rem,1.3vw,1.2rem);color:var(--gold-l);letter-spacing:0.25em;padding-left:0.25em;white-space:nowrap;font-weight:500}
+.opening-brand{
+  position:fixed;bottom:5.5vh;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:clamp(0.9rem,1.5vw,1.5rem);
+  pointer-events:none;z-index:50;
+}
+.opening-brand img{
+  width:clamp(54px,5.5vw,90px);height:auto;opacity:0.95;
+  filter:drop-shadow(0 0 24px rgba(200,163,92,0.22));
+}
+.opening-brand .brand-text{
+  font-family:var(--f-serif);font-size:clamp(1.15rem,1.7vw,1.55rem);
+  color:var(--gold-l);letter-spacing:0.32em;padding-left:0.32em;white-space:nowrap;font-weight:500;
+}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 .slide.active>*{animation:fadeUp 0.7s cubic-bezier(.22,.61,.36,1) backwards}
-.slide.active>*:nth-child(1){animation-delay:0.1s}
-.slide.active>*:nth-child(2){animation-delay:0.22s}
-.slide.active>*:nth-child(3){animation-delay:0.34s}
-.slide.active>*:nth-child(4){animation-delay:0.46s}
-.slide.active>*:nth-child(5){animation-delay:0.58s}
+.slide.active>*:nth-child(1){animation-delay:0.08s}
+.slide.active>*:nth-child(2){animation-delay:0.20s}
+.slide.active>*:nth-child(3){animation-delay:0.32s}
+.slide.active>*:nth-child(4){animation-delay:0.44s}
+.slide.active>*:nth-child(5){animation-delay:0.56s}
+.slide.active>*:nth-child(6){animation-delay:0.68s}
 
 @media (max-aspect-ratio:1/1){
-  .three-col{grid-template-columns:1fr;gap:1.5rem}
-  .brand-fix img{width:clamp(32px,8vw,46px)}
-  .brand-fix .brand-text{font-size:clamp(0.85rem,2.6vw,1rem);letter-spacing:0.15em}
+  .cmp-grid{grid-template-columns:1fr;gap:1.2rem}
+  .spec-card .spec-row{flex-direction:column;gap:0.4rem}
+  .opening-brand img{width:clamp(40px,8vw,58px)}
+  .opening-brand .brand-text{font-size:clamp(0.9rem,2.8vw,1.05rem);letter-spacing:0.2em}
 }
 </style>
 </head>
@@ -136,89 +276,112 @@ h2.subtitle{
 
 <div class="deck">
 
-<!-- 1. 封面 -->
+<!-- ===== 01 封面 COVER ===== -->
 <section class="slide active slide-cover">
-  <div class="cover-eyebrow">第 〇 章 · 开课导言</div>
-  <h1 class="cover-title">企业 AI 智能体改造<br><span class="gold">先 导 课</span></h1>
+  <div class="cover-eyebrow">第 〇 章 · 开 课 导 言</div>
+  <h1 class="cover-title">企 业 A I 智 能 体 改 造<br><span class="gold">先 导 课</span><br><span style="font-size:0.42em;color:var(--cream);font-weight:500;letter-spacing:0.08em">我 是 谁 · 市 场 机 会 · 两 条 路</span></h1>
   <div class="cover-motto">不讲概念 · 只讲怎么把 AI 装进你的业务里</div>
-  <div class="cover-by">— 主讲 · 聪 哥 —</div>
 </section>
 
-<!-- 2. 章节标题: 自我介绍 -->
+<!-- ===== 02 章节定位 我是谁 ===== -->
 <section class="slide">
-  <div class="eyebrow"><span class="num">01</span>我是谁</div>
-  <h1 class="title">在开始之前</h1>
+  <div class="eyebrow"><span class="num">0.1</span>第 〇 章 · 第 一 节</div>
+  <h1 class="title">在开始之前 · <span style="color:var(--gold-3)">先认识我</span></h1>
   <div class="section-divider"></div>
-  <h2 class="subtitle">让我用三分钟 · 介绍一下自己</h2>
+  <h2 class="subtitle">你为什么 · <span style="color:var(--gold-3);font-weight:700">值得花这点时间</span></h2>
 </section>
 
-<!-- 3. 自我介绍 · 立人设 -->
+<!-- ===== 03 人设大卡 聪哥 ===== -->
 <section class="slide">
-  <div class="eyebrow">主讲人 · 我是谁</div>
-  <h1 class="title">聪 哥</h1>
-  <h2 class="subtitle"><span style="color:var(--gold-3)">TOB · TOG · AI 业务负责人</span><br><span style="font-size:0.85em;color:var(--muted);letter-spacing:0.1em">销售 — 产品 — 交付 · 全流程闭环</span></h2>
-  <div class="three-col" style="margin-top:4vh">
-    <div class="col-card">
-      <div class="col-medal" style="font-size:clamp(1.1rem,1.6vw,1.4rem);letter-spacing:0.1em;line-height:1.3">国际一线<br>IT 大厂</div>
-      <div class="col-desc" style="margin-top:1em;font-size:clamp(0.9rem,1.25vw,1.1rem);line-height:1.7">需求 · 立项 · 投标 · 交付<br>全流程操盘<br><span style="color:var(--gold-l);font-weight:600">几百万 → 上亿 软件大单</span></div>
+  <div class="adv-hero">
+    <div class="adv-num">主 讲</div>
+    <div class="adv-name">聪 哥</div>
+    <div class="adv-tag">TOB · TOG · <span class="gold">AI 业务负责人</span></div>
+    <div class="adv-desc">销售 · 产品 · 交付 · <span class="em">全流程闭环</span><br>非理论派 · 亲手签过 <span class="em">上亿大单</span></div>
+    <div class="adv-eg">十年大厂 · 三段不同维度的 AI 商业化实战 · 踩过的坑 都变成了这门课</div>
+  </div>
+</section>
+
+<!-- ===== 04 履历链路 FLY-ROW ===== -->
+<section class="slide">
+  <div class="label">三 段 履 历 · <span style="color:var(--gold-3)">把 TOB 走通了</span></div>
+  <div class="fly-row" style="margin-top:3vh">
+    <div class="node"><span class="em">国 际 一 线 IT 大 厂</span><span class="sub">需求 · 立项 · 投标 · 交付</span></div>
+    <div class="arr">·</div>
+    <div class="node"><span class="em">国 内 互 联 网 大 厂</span><span class="sub">SaaS · 立项 · 售卖</span></div>
+    <div class="arr">·</div>
+    <div class="node"><span class="em">国 内 AI 软 件 大 厂</span><span class="sub">智能体 · 软硬一体</span></div>
+  </div>
+  <div class="caption">不同维度 · <span style="color:var(--gold-3);font-weight:700">把 TOB / TOG 走通了一遍</span> —— 哪一环都没漏</div>
+</section>
+
+<!-- ===== 05 履历详情 SPEC ===== -->
+<section class="slide">
+  <div class="label">三 段 履 历 · <span style="color:var(--gold-3)">实际操盘金额</span></div>
+  <div class="spec-card">
+    <div class="spec-row">
+      <div class="spec-key">国 际 大 厂</div>
+      <div class="spec-val">需求 · 立项 · 投标 · 交付 <span class="em">全流程操盘</span> —— 从几百万到 <span class="em">上亿软件大单</span></div>
     </div>
-    <div class="col-card">
-      <div class="col-medal" style="font-size:clamp(1.1rem,1.6vw,1.4rem);letter-spacing:0.1em;line-height:1.3">国内<br>互联网大厂</div>
-      <div class="col-desc" style="margin-top:1em;font-size:clamp(0.9rem,1.25vw,1.1rem);line-height:1.7">SaaS 立项 · 产品 · 售卖<br>几千 → 几十万 订单<br><span style="color:var(--gold-l);font-weight:600">中国最大 SaaS 平台建设者</span></div>
+    <div class="spec-row">
+      <div class="spec-key">互 联 网 大 厂</div>
+      <div class="spec-val">SaaS 立项 · 产品 · 售卖 —— 几千到几十万订单 · <span class="em">中国最大 SaaS 平台建设者</span></div>
     </div>
-    <div class="col-card primary">
-      <div class="col-medal" style="font-size:clamp(1.1rem,1.6vw,1.4rem);letter-spacing:0.1em;line-height:1.3;color:var(--gold-3)">国内 AI<br>软件大厂</div>
-      <div class="col-desc" style="margin-top:1em;color:var(--cream);font-size:clamp(0.9rem,1.25vw,1.1rem);line-height:1.7">几万 → 几十万 → 上百万<br>智能体 开发售卖<br><span style="color:var(--gold-3);font-weight:600">软硬一体智能体设备<br>研发与售卖</span></div>
+    <div class="spec-row">
+      <div class="spec-key">A I  大 厂</div>
+      <div class="spec-val">几万 → 几十万 → <span class="em">上百万</span> 智能体开发售卖 · <span class="em">软硬一体智能体设备</span> 研发与售卖</div>
     </div>
   </div>
-  <div class="caption" style="margin-top:3.5vh;font-size:clamp(1rem,1.5vw,1.3rem)">非理论派 · <span style="color:var(--gold-3);font-weight:600">亲手签过上亿大单</span> · 踩过的坑 都变成了这门课</div>
+  <div class="caption-sm">不是空话 —— 是<span style="color:var(--gold-3);font-weight:700">真金白银签出来的经验</span></div>
 </section>
 
-<!-- 4. 章节标题: 行业前景 -->
+<!-- ===== 06 章节定位 市场机会 ===== -->
 <section class="slide">
-  <div class="eyebrow"><span class="num">02</span>行业判断</div>
-  <h1 class="title">企业 AI 智能体改造 · <span style="color:var(--gold-3)">前景</span></h1>
+  <div class="eyebrow"><span class="num">0.2</span>第 〇 章 · 第 二 节</div>
+  <h1 class="title">企业 AI 智能体改造 · <span style="color:var(--gold-3)">前 景</span></h1>
   <div class="section-divider"></div>
-  <h2 class="subtitle">这是一个 · 十年一遇的窗口</h2>
+  <h2 class="subtitle">万 亿 赛 道 · <span style="color:var(--gold-3);font-weight:700">怎么吃到自己嘴里</span></h2>
 </section>
 
-<!-- 7. 大数字 · 万亿大盘 -->
+<!-- ===== 07 痛点引入 QUOTE-BIG ===== -->
 <section class="slide">
-  <div class="label">企业 AI 智能体改造 · 大盘</div>
+  <div class="label">很多人 · <span style="color:var(--gold-3)">卡在这一步</span></div>
+  <div class="quote-big" style="line-height:1.5">
+    "AI 这事 · <span class="em">我看好</span><br>
+    可是 ——<br>
+    <span class="red">我吃不到嘴里</span>"
+  </div>
+  <div class="caption">这一节 · 就把这层窗户纸<span style="color:var(--gold-3);font-weight:700">捅破</span></div>
+</section>
+
+<!-- ===== 08 大数字 万亿 ===== -->
+<section class="slide">
+  <div class="label">企业 AI 智能体改造 · <span style="color:var(--gold-3)">大盘</span></div>
   <div class="bignum">万 亿</div>
   <div class="caption">这个数字 · <span style="color:var(--gold-3);font-weight:700">凭什么是真的？</span></div>
   <div class="caption-sm">看一眼 Anthropic 的故事 · 你就懂了</div>
 </section>
 
-<!-- 8. 底层逻辑 · 找对场景就是印钞机 -->
+<!-- ===== 09 底层逻辑 LIST ===== -->
 <section class="slide">
-  <div class="eyebrow">底 层 逻 辑 · 为 什 么 是 真 的</div>
-  <h1 class="title">找到 <span style="color:var(--gold-3)">最有价值的场景</span><br>就 是 印 钞 机</h1>
-  <ul class="list-big" style="margin-top:4vh">
-    <li><span class="num">①</span>Claude Code · Opus 模型 · <span class="em">编程能力全球最强</span></li>
+  <div class="label">底 层 逻 辑 · <span style="color:var(--gold-3)">为什么是真的</span></div>
+  <ul class="list-big" style="margin-top:2vh">
+    <li><span class="num">①</span>Claude Code · Opus · <span class="em">编程能力全球最强</span></li>
     <li><span class="num">②</span>Anthropic 估值 · <span class="em">已经反超 OpenAI</span></li>
-    <li><span class="num">③</span>凭什么？· 它锁死了 <span class="em">「编程」</span> 这个最值钱的场景</li>
+    <li><span class="num">③</span>凭什么？· 锁死 <span class="em">「编程」</span> 这个最值钱的场景</li>
   </ul>
+  <div class="caption-sm">找到 <span style="color:var(--gold-3);font-weight:700">最有价值的场景</span> —— 就 是 印 钞 机</div>
 </section>
 
-<!-- 9. 营收增速 · 数据印证 -->
+<!-- ===== 10 数据印证 FLY-ROW Anthropic 营收 ===== -->
 <section class="slide">
-  <div class="label">Anthropic 营收预测 · 亿美元</div>
-  <div class="timeline" style="gap:clamp(1.5rem,3.5vw,3.5rem)">
-    <div class="tl-item">
-      <div class="tl-date">2025 年</div>
-      <div class="tl-val">90</div>
-    </div>
-    <div class="tl-arrow">→</div>
-    <div class="tl-item">
-      <div class="tl-date">2028 年</div>
-      <div class="tl-val">8500</div>
-    </div>
-    <div class="tl-arrow">→</div>
-    <div class="tl-item">
-      <div class="tl-date">2030 年</div>
-      <div class="tl-val" style="color:var(--gold-3)">20000</div>
-    </div>
+  <div class="label">Anthropic 营收预测 · <span style="color:var(--gold-3)">亿美元</span></div>
+  <div class="fly-row" style="margin-top:3vh">
+    <div class="node"><span class="em">2025</span><span class="sub">90 亿</span></div>
+    <div class="arr">→</div>
+    <div class="node"><span class="em">2028</span><span class="sub">8 500 亿</span></div>
+    <div class="arr">→</div>
+    <div class="node"><span class="em">2030</span><span class="sub">2 万亿</span></div>
   </div>
   <div class="quote-mid" style="margin-top:3vh">
     5 年 · <span class="em">220 倍</span> · <span class="red">反超 Alphabet</span>
@@ -226,47 +389,64 @@ h2.subtitle{
   <div class="caption-sm">数据来源 · 格隆汇 / 勾股大数据 · 2025–2030 预测</div>
 </section>
 
-<!-- 10. 两类机会 · 升职加薪 vs 兼职创业 -->
+<!-- ===== 11 章节定位 两类机会 ===== -->
 <section class="slide">
-  <div class="eyebrow">两类机会 · 学完都能接住</div>
-  <div class="three-col" style="grid-template-columns:repeat(2,1fr);max-width:1000px">
-    <div class="col-card">
-      <div class="col-medal" style="font-size:clamp(1.1rem,1.8vw,1.5rem);letter-spacing:0.15em;line-height:1.3">向 内<br>企业智能体 · 提效</div>
-      <div class="col-desc" style="margin-top:1.2em;font-size:clamp(0.95rem,1.3vw,1.15rem);line-height:1.75">在你公司内部<br>把业务流程用智能体重做一遍<br>把效率提十倍<br><span style="color:var(--gold-3);font-weight:700;font-size:1.1em">→ 升 职 加 薪</span></div>
-    </div>
-    <div class="col-card primary">
-      <div class="col-medal" style="font-size:clamp(1.1rem,1.8vw,1.5rem);letter-spacing:0.15em;line-height:1.3;color:var(--gold-3)">向 外<br>企业智能体 · 咨询</div>
-      <div class="col-desc" style="margin-top:1.2em;color:var(--cream);font-size:clamp(0.95rem,1.3vw,1.15rem);line-height:1.75">接企业的智能体开发需求<br>给中小老板做改造方案<br>从几万到几十万一单<br><span style="color:var(--gold-3);font-weight:700;font-size:1.1em">→ 兼 职 创 业</span></div>
-    </div>
-  </div>
-  <div class="caption" style="margin-top:3.5vh;font-size:clamp(1rem,1.5vw,1.3rem)">这门课 · <span style="color:var(--gold-3);font-weight:600">两条路都给你打通</span></div>
+  <div class="eyebrow"><span class="num">0.3</span>第 〇 章 · 第 三 节</div>
+  <h1 class="title">这 个 市 场 · <br><span style="color:var(--gold-3)">怎 么 落 到 你 头 上</span></h1>
+  <div class="section-divider"></div>
+  <h2 class="subtitle">两 条 路 · <span style="color:var(--gold-3);font-weight:700">都给你打通</span></h2>
 </section>
 
-<!-- 9. 金句 -->
+<!-- ===== 12 两类机会 CMP-GRID (两边都是 good) ===== -->
 <section class="slide">
-  <div class="quote-big">
-    这不是一次<span class="em">技术升级</span><br>
+  <div class="label">两 类 机 会 · <span style="color:var(--gold-3)">学完都能接住</span></div>
+  <div class="cmp-grid">
+    <div class="cmp-card good">
+      <div class="head">向 内</div>
+      <div class="qs">
+        <div class="q">在公司内部 · 用智能体 <span class="em">重做业务流程</span></div>
+        <div class="q">把效率 · <span class="em">提十倍</span></div>
+        <div class="q" style="border:1px solid var(--gold);background:rgba(243,214,120,0.08);color:var(--gold-3);font-weight:700;text-align:center;letter-spacing:0.1em">→  升 职 加 薪</div>
+      </div>
+    </div>
+    <div class="cmp-card good">
+      <div class="head">向 外</div>
+      <div class="qs">
+        <div class="q">接企业的 <span class="em">智能体开发需求</span></div>
+        <div class="q">几万 · 几十万 · <span class="em">上百万一单</span></div>
+        <div class="q" style="border:1px solid var(--gold);background:rgba(243,214,120,0.08);color:var(--gold-3);font-weight:700;text-align:center;letter-spacing:0.1em">→  兼 职 创 业</div>
+      </div>
+    </div>
+  </div>
+  <div class="caption-sm">这门课 · <span style="color:var(--gold-3);font-weight:700">两条路都给你打通</span></div>
+</section>
+
+<!-- ===== 13 金句收束 QUOTE-BIG ===== -->
+<section class="slide">
+  <div class="quote-big" style="line-height:1.5">
+    这不是一次 <span class="em">技术升级</span><br>
     <br>
-    这是一次<span class="red">重新建厂</span>
+    这是一次 <span class="red">重 新 建 厂</span>
   </div>
+  <div class="caption" style="margin-top:5vh">错过这一波 · <span style="color:var(--gold-3);font-weight:700">不是技术落后</span> · 是组织被边缘化</div>
 </section>
 
-<!-- 10. 结尾 -->
+<!-- ===== 14 尾页 ENDING ===== -->
 <section class="slide slide-cover">
-  <div class="cover-eyebrow">现在 · 轮到你</div>
-  <h1 class="cover-title">第 一 课<br><span class="gold">见</span></h1>
-  <div class="cover-motto" style="margin-top:5vh">把这门课 · 当成你 AI 化改造的第一个项目</div>
+  <div class="cover-eyebrow">第 〇 章 · 开 课 导 言 · 完</div>
+  <h1 class="cover-title">第 一 课 · <span class="gold">不 再 遥 远</span></h1>
+  <div class="cover-motto" style="margin-top:5vh">把这门课 · 当成你的第一个 <span style="color:var(--gold-3);font-style:normal;font-weight:700">AI 化改造项目</span></div>
 </section>
 
 </div>
 
-<div class="brand-fix">
+<div class="opening-brand">
   <img src="images/logo.png" alt="logo">
-  <span class="brand-text">企业 AI 智能体改造实战课 · 聪哥出品</span>
+  <span class="brand-text">企业 AI 智能体改造 · 聪 哥 出 品</span>
 </div>
 
 <div class="controls">
-  <div class="hint">← → 翻页 · 空格下一页 · F 全屏</div>
+  <div class="hint">← → 翻页 · 空格下一页 · F 全屏 · Home 首页</div>
   <div class="progress" id="progress">1 / 1</div>
 </div>
 
@@ -278,41 +458,48 @@ const progress = document.getElementById('progress');
 const progressBar = document.getElementById('progressBar');
 
 function show(n){
-  if(n<0||n>=total)return;
+  if(n < 0 || n >= total) return;
   slides[current].classList.remove('active');
-  current=n;
+  current = n;
   slides[current].classList.add('active');
-  progress.textContent=`${current+1} / ${total}`;
-  progressBar.style.width=`${((current+1)/total)*100}%`;
+  progress.textContent = `${current + 1} / ${total}`;
+  progressBar.style.width = `${((current + 1) / total) * 100}%`;
+  slides[current].scrollTop = 0;
 }
-function next(){show(Math.min(current+1,total-1))}
-function prev(){show(Math.max(current-1,0))}
 
-document.addEventListener('keydown',e=>{
+function next(){show(Math.min(current + 1, total - 1))}
+function prev(){show(Math.max(current - 1, 0))}
+
+document.addEventListener('keydown', e => {
   switch(e.key){
-    case 'ArrowRight':case ' ':case 'PageDown':case 'Enter':e.preventDefault();next();break;
-    case 'ArrowLeft':case 'PageUp':case 'Backspace':e.preventDefault();prev();break;
+    case 'ArrowRight':case ' ':case 'PageDown':case 'Enter':
+      e.preventDefault();next();break;
+    case 'ArrowLeft':case 'PageUp':case 'Backspace':
+      e.preventDefault();prev();break;
     case 'Home':e.preventDefault();show(0);break;
-    case 'End':e.preventDefault();show(total-1);break;
-    case 'f':case 'F':e.preventDefault();
+    case 'End':e.preventDefault();show(total - 1);break;
+    case 'f':case 'F':
+      e.preventDefault();
       if(!document.fullscreenElement){document.documentElement.requestFullscreen?.()}
       else{document.exitFullscreen?.()}
       break;
   }
 });
 
-document.addEventListener('click',e=>{
-  if(e.target.tagName==='A'||e.target.tagName==='BUTTON')return;
-  const w=window.innerWidth;
-  if(e.clientX<w/4)prev();else next();
+document.addEventListener('click', e => {
+  if(e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+  const w = window.innerWidth;
+  if(e.clientX < w / 4) prev();
+  else next();
 });
 
-let touchX=0;
-document.addEventListener('touchstart',e=>{touchX=e.touches[0].clientX},{passive:true});
-document.addEventListener('touchend',e=>{
-  const dx=e.changedTouches[0].clientX-touchX;
-  if(dx>60)prev();else if(dx<-60)next();
-},{passive:true});
+let touchX = 0;
+document.addEventListener('touchstart', e => {touchX = e.touches[0].clientX}, {passive:true});
+document.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchX;
+  if(dx > 60) prev();
+  else if(dx < -60) next();
+}, {passive:true});
 
 show(0);
 </script>
